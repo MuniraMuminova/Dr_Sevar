@@ -1,0 +1,35 @@
+@font-face {
+    font-family: 'ML';
+    src: url(@/assets/fonts/MonsieurLaDoulaise-Regular.ttf);
+    font-weight: 700;
+}
+
+
+
+$CormorantInfant: ('MediumItalic', 400),
+          ('BoldItalic', 700);
+
+@each $name, $weight in $CormorantInfant{
+    @font-face {
+        font-family: 'CormorantInfant';
+        src: url(@/assets/fonts/CormorantInfant-#{$name}.ttf);
+        font-weight: $weight;
+    }
+}
+$OldStandardTT: ('Regular', 400),
+                ('Bold', 700);
+
+@each $name, $weight in $OldStandardTT{
+    @font-face {
+        font-family: 'OldStandardTT';
+        src: url(@/assets/fonts/OldStandardTT-#{$name}.ttf);
+        font-weight: $weight;
+    }
+}
+
+
+@font-face {
+    font-family: 'OI';
+    src: url(@/assets/fonts/OldStandardTT-Italic.ttf);
+    font-weight: 400;
+}

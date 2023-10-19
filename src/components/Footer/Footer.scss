@@ -1,0 +1,91 @@
+.footer {
+
+    &__icon {
+        font-size: 35px;
+
+        border-radius: 50%;
+        color: #FA58A6;
+    }
+
+    &__list {
+        background: #3D021E;
+        padding: 0 20px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 20px;
+
+        @include media(800) {
+            flex-wrap: wrap;
+            flex-direction: column;
+            gap: 0;
+        }
+
+    }
+
+    &__link {
+        padding: 25px;
+        width: 100%;
+        display: flex;
+
+        @include media(800) {
+
+            justify-content: center;
+        }
+
+        &-text {
+            font-size: 25px;
+            font-weight: 700;
+            text-align: center;
+            color: #fff;
+            padding-left: 20px;
+
+
+        }
+    }
+
+    &__top {
+        border-top: 1px solid #79043C;
+        background: #FBEFF2;
+
+        &-list {
+            display: flex;
+            justify-content: center;
+
+            @include media(800) {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+
+        &-link {
+            padding: 30px 50px;
+
+            @include media(800) {
+                padding: 15px;
+            }
+        }
+
+        &-btn {
+            color: #FBEFF2;
+            width: 270px;
+            height: 40px;
+            border: none;
+            background: #79043C;
+            font-size: 22px;
+        }
+    }
+
+    &__bottom {
+        background: #14010A;
+
+        &-name {
+            font-family: 'ML';
+            color: #fff;
+            font-size: 35px;
+            font-weight: 700;
+            padding: 16px 0;
+            text-align: center;
+        }
+    }
+}

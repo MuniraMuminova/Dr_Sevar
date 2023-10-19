@@ -1,0 +1,297 @@
+.main {
+    background: #FEF3E2;
+    height: 600px;
+    width: 100%;
+    @include media(550) {
+       height: 100%;
+    }
+
+    &__right {
+        width: 50%;
+        position: absolute;
+        top: 90px;
+        right: 0;
+
+        @include media(800) {
+            display: none;
+        }
+
+        &-img {
+            width: 100%;
+            object-fit: fill;
+            height: 510px;
+        }
+    }
+
+    &__left {
+        position: relative;
+        height: 100%;
+        width: 50%;
+        left: 6%;
+        z-index: 1;
+        padding-top: 150px;
+
+        @include media(800) {
+            width: 90%;
+            margin: 0 auto;
+            left: 0;
+        }
+
+        @include media(600) {
+            padding-top: 120px;
+        }
+        
+
+        &-title {
+            font-family: "OI";
+            font-size: 35px;
+            font-weight: 700;
+            line-height: 104.762%;
+            color: #A10550;
+            padding-bottom: 35px;
+
+            @include media(900) {
+                text-align: center;
+
+            }
+
+            @include media(450) {
+                font-size: 30px;
+                padding-bottom: 20px;
+            }
+        }
+
+        &-text {
+            font-family: 'OI';
+            font-size: 25px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 148.8%;
+            padding-bottom: 30px;
+
+            @include media(900) {
+                text-align: center;
+
+            }
+
+            @include media(400) {
+                font-size: 20px;
+            }
+        }
+
+        &-bottom {
+            display: flex;
+            gap: 30px;
+
+            @include media(800) {
+                justify-content: center;
+            }
+
+            @include media(600) {
+                flex-direction: column;
+                align-items: center;
+                gap: 20px;
+                padding-bottom: 30px;
+            }
+        }
+
+        &-btn {
+            width: 250px;
+            height: 50px;
+            font-size: 18px;
+            text-transform: uppercase;
+            font-weight: 700;
+            color: #A10550;
+            border: 2px solid #A10550;
+            border-radius: 1000px;
+            background: transparent;
+            transition: all 0.3s ease-in-out 0s;
+            cursor: pointer;
+            &:hover{
+                box-shadow: 6px 6px 30px #A10550;
+            }
+        }
+    }
+}
+
+.bottom {
+    width: 80%;
+    margin: 0 auto;
+    padding-top: 70px;
+
+    
+
+    &__text {
+        font-family: 'OI';
+        text-align: center;
+        font-size: 35px;
+        font-weight: 400;
+        line-height: 110.8%;
+
+        @include media(700) {
+            font-size: 28px;
+
+        }
+    }
+}
+
+
+// ====================================== Service =================================
+
+.swiper {
+    width: 100%;
+    margin: 0 auto;
+    cursor: pointer;
+
+
+    &__img {
+        width: 250px;
+        height: 350px;
+        object-fit: cover;
+     
+        border-radius: 10px;  
+        &:hover {
+            box-shadow: 0 0 10px #ffffff4d, 0 0 20px #ffffff4d, 0 0 30px #ffffff4d, 0 0 40px #ffffff4d, 0 0 50px #ffffff4d;
+            transition: .5s;
+            transform: scale(1.1);
+
+        }
+
+        &-text {
+            color: #FFFBFA;
+            font-weight: 700;
+            font-size: 25px;
+            text-shadow: 2px 2px 4px black, 0 0 6px red;
+            position: absolute;
+            top: 70%;
+            z-index: 10;
+         width: 200px;
+            text-align: center;
+            margin: 0 auto;
+        
+          
+       
+        }
+
+    }
+
+
+
+}
+
+.slider {
+    width: 90%;
+    margin: 0 auto;
+    padding-top: 50px;
+    margin-bottom: 50px;
+    height: 400px;
+
+}
+
+
+.swiper-button-prev:after,
+.swiper-button-next:after {
+    color: #A10550;
+    width: 10px;
+}
+
+.swiper-slide-active,
+.swiper-slide-next,
+.swiper-slide-prev {
+    margin: 0;
+    display: flex;
+    justify-content: center;
+}
+
+.service__button {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 100px;
+
+    &-btn {
+        min-width: 300px;
+        min-height: 60px;
+        font-size: 18px;
+        text-transform: uppercase;
+        letter-spacing: 1.3px;
+        font-weight: 700;
+        color: #A10550;
+        background: #FFFBFA;
+        border: none;
+        border-radius: 1000px;
+        box-shadow: 12px 12px 24px #A10550;
+        transition: all 0.3s ease-in-out 0s;
+        cursor: pointer;
+        outline: none;
+        position: relative;
+        padding: 10px;
+        @include media(450){
+            max-width: 200px;
+            
+        }
+
+
+        &::before {
+            content: '';
+            border-radius: 1000px;
+            min-width: calc(300px + 12px);
+            min-height: calc(60px + 12px);
+            border: 3px solid #A10550;
+            box-shadow: 0 0 60px #A10550;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            opacity: 0;
+            transition: all .3s ease-in-out 0s;
+        }
+
+        &:hover,
+        &:focus {
+            color: #FFFBFA;
+            background: #A10550;
+            transform: translateY(-6px);
+        }
+
+        &:hover::before,
+        &:focus::before {
+            opacity: 1;
+        }
+
+        &::after {
+            content: '';
+            width: 30px;
+            height: 30px;
+            border-radius: 100%;
+            border: 6px solid #A10550;
+            position: absolute;
+            z-index: -1;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            animation: ring 1.5s infinite;
+        }
+
+        &:hover::after,
+        &:focus::after {
+            animation: none;
+            display: none;
+        }
+    }
+}
+
+@keyframes ring {
+    0% {
+        width: 30px;
+        height: 30px;
+        opacity: 1;
+    }
+
+    100% {
+        width: 200px;
+        height: 200px;
+        opacity: 0;
+    }
+}
